@@ -1,0 +1,173 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* Container chính */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
+
+.error-message {
+    padding-top: 10px;
+}
+
+/* Hộp đăng nhập */
+.register-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Tiêu đề */
+.register-box h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* Các ô nhập liệu */
+.input-group {
+    margin-bottom: 15px;
+    padding-right: 20px;
+}
+
+.label-input-group {
+    margin-right: 0;
+    text-align: left; /* Căn trái nội dung bên trong */
+    display: flex;
+    justify-content: flex-start; /* Căn trái nếu dùng flexbox */
+    align-items: center; /* Giữ nhãn và input thẳng hàng */
+    padding-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/*.input-group:hover {*/
+/*    border-style: solid;*/
+/*    border-color: blue;*/
+/*    border-radius: 7px;*/
+/*}*/
+
+.checkbox-and-label {
+    margin-right: 0;
+    text-align: left; /* Đảm bảo văn bản căn trái */
+    display: flex;
+    justify-content: flex-start; /* Căn trái nếu dùng flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-bottom: 20px;
+    gap: 5px; /* Tạo khoảng cách nhỏ giữa checkbox và label */
+
+}
+
+.checkbox-and-label:hover {
+    cursor: pointer;
+}
+
+.checkbox-label:hover {
+    cursor: pointer;
+}
+
+/* Ô nhập liệu có hiệu ứng focus */
+.input-group input:focus {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Quên mật khẩu */
+.forgot-password {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #ff2e00;
+    box-shadow: 0px 0px 10px rgba(255, 87, 51, 0.8);
+}
+
+/* Đăng nhập với mạng xã hội */
+.social-register {
+    margin: 15px 0;
+}
+
+.social-register a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-register img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-register img:hover {
+    transform: scale(1.2);
+}
+
+/* Đăng ký */
+.register-text {
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
