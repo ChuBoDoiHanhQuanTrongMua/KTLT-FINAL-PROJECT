@@ -1,0 +1,12 @@
+/* Styles cho hiển thị văn bản trong bảng */
+.title-text {
+    font-weight: bold;
+}
+
+.normal-text {
+    font-weight: normal;
+}
+
+.formula-text {
+    font-style: italic;
+} 

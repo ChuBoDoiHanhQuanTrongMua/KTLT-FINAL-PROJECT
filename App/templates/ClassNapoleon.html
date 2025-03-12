@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lớp Học Napoleon - AI Tương Tác</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/Class.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/text-styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/ic_logo.jpg') }}" alt="Logo Lớp Học AI" class="logo">
+            <h1>Lớp Học AI Tương Tác</h1>
+        </div>
+    </header>
+
+    <div class="background-container"></div>
+
+    <main class="main-content">
+        <section class="class-section">
+            <div class="class-info">
+                <h2 id="lecture-title" data-character="Napoleon">Bài Giảng: Chiến Lược - Napoleon Bonaparte</h2>
+                <p>Chào mừng bạn đến với lớp học AI. Đây là nơi bạn sẽ học về chiến lược quân sự, nghệ thuật lãnh đạo và các chiến dịch lịch sử từ vị hoàng đế và thiên tài quân sự Napoleon Bonaparte.</p>
+
+                <div class="teaching-container">
+                    <div class="classroom-image">
+                        <div class="ceiling-light"></div>
+                        <div class="classroom-scene">
+                            <div class="blackboard">
+                                <div class="frame"></div>
+                                <div class="lecture-text" id="lecture-content"></div>
+                                <div id="chalk-piece" class="chalk-piece"></div>
+                                <div id="chalk-dust-container"></div>
+                                <div class="chalk-tray">
+                                    <div class="eraser"></div>
+                                    <div class="chalk"></div>
+                                    <div class="chalk"></div>
+                                </div>
+                            </div>
+                            <div class="teacher">
+                                <img src="{{ url_for('static', filename='images/ic_Napoleon.png') }}" alt="Giáo viên Napoleon Bonaparte" class="teacher-image">
+                                <div class="teacher-hand"></div>
+                            </div>
+                        </div>
+                        <div class="classroom-props">
+                            <div class="desk"></div>
+                            <div class="desk"></div>
+                            <div class="desk"></div>
+                            <div class="desk"></div>
+                            <div class="desk"></div>
+                        </div>
+                    </div>
+                    <div class="scrolling-text"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="control-section">
+            <div class="class-functions">
+                <h3 class="function-title">Chức Năng Lớp Học</h3>
+                
+                <div class="controls-container">
+                    <button class="stop-class-btn" onclick="window.location.href='/mainscreen'">
+                        <i class="fas fa-sign-out-alt"></i> Dừng Lớp
+                    </button>
+                </div>
+                
+                <div class="chat-container">
+                    <textarea class="chatbox" placeholder="Hãy nhập câu hỏi của bạn..."></textarea>
+                    <button class="send-btn">
+                        <i class="fas fa-paper-plane"></i> Gửi
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lớp Học AI Tương Tác. Mọi quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='scripts/classroom.js') }}"></script>
+</body>
+</html> 

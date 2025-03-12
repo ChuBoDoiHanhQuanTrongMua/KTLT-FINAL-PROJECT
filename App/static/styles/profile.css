@@ -1,0 +1,277 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url("../images/profile.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: left;
+    gap: 15px;
+}
+
+header .logo {
+    height: 50px;
+    border-radius: 60%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Container for Profile, Conversations, Classes, Progress */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 10px;
+}
+
+/* User Profile */
+.profile-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 650px;
+    font-size: 18px;
+}
+
+/* Section for Conversation History, Classes, and Learning Progress */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+/* Category Section (Conversation, Classes, Progress) */
+.category {
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white;
+    margin-top: 15px;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjusting Conversation History items */
+.category .list-group-item {
+    min-height: 40px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Learning Progress Container styling */
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-text {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Learning Progress Bar */
+.learning-progress {
+    background: linear-gradient(135deg, #FF6347, #FF7F00, #FFA500);
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* Progress bar styling */
+.progress {
+    height: 25px;
+    border-radius: 15px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Save Button */
+.btn-primary {
+    background-color: #FF4500;  /* Màu cam cho nút */
+    border-color: #FF6347;      /* Màu viền của nút */
+}
+
+.btn-primary:hover {
+    background-color: #FF6347;  /* Màu khi hover */
+    border-color: #FF7F00;      /* Màu viền khi hover */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* To avoid scrolling */
+html, body {
+    height: 115%;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile-card, .category, .learning-progress {
+        width: 80%;
+    }
+}
+
+/* Conversation History styling */
+.conversation-container {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.conversation-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.conversation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.conversation-date {
+    font-style: italic;
+}
+
+.conversation-character {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.conversation-content {
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.no-data {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Thêm CSS cho Classes Attended */
+.class-list-container {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-top: 10px;
+}
+
+.class-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+    color: #333; /* Màu chữ tối */
+    background-color: #fff; /* Nền màu trắng */
+}
+
+.class-item:last-child {
+    border-bottom: none;
+}
+
+.class-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Chỉnh sửa styling cho scrollbar */
+.class-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.class-list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.class-list-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 8px;
+}
+
+.class-list-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

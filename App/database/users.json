@@ -1,0 +1,37 @@
+[
+    {
+        "full_name": "Hồ Minh Khang",
+        "username": "beoooo123",
+        "email": "hominhkhang01072005@gmail.com",
+        "phone_number": "0976861309",
+        "dob": "2005-01-07",
+        "password": "123456",
+        "age": "18",
+        "gender": "Male",
+        "student_id": "K234111433",
+        "profile_picture": "/static/uploads/IMG_7971.JPG",
+        "conversation_history": [
+            {
+                "date": "12/03/2025 11:01",
+                "character": "Einstein",
+                "content": "Q: ông là ai \nA: Tôi là Albert Einstein, kẻ tò mò lang thang giữa không gian và thời gian, cố gắng giải mã những bí mật mà vũ trụ ẩn giấu.\n"
+            }
+        ],
+        "classes_attended": [
+            "TonTu - 10/03/2025 20:23",
+            "Caesar - 10/03/2025 20:23",
+            "Curie - 10/03/2025 22:26",
+            "Tesla - 10/03/2025 22:26",
+            "Socrates - 10/03/2025 22:26",
+            "Einstein - 10/03/2025 22:28",
+            "Newton - 10/03/2025 22:28",
+            "Aristotle - 10/03/2025 22:29",
+            "KhongTu - 10/03/2025 22:29",
+            "DaVinci - 10/03/2025 22:29",
+            "Shakespeare - 10/03/2025 22:29",
+            "Beethoven - 10/03/2025 22:29",
+            "Napoleon - 10/03/2025 22:29"
+        ],
+        "learning_progress": 13
+    }
+]
