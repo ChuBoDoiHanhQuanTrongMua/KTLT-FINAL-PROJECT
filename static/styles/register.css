@@ -1,0 +1,282 @@
+/* Định dạng chung */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../images/ic_background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 32, 80, 0.7), rgba(0, 12, 35, 0.8));
+    z-index: -1;
+}
+
+/* Container chính */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.error-message {
+    color: #ff5f5f;
+    font-size: 13px;
+    text-align: left;
+    margin-top: 5px;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(255, 95, 95, 0.3);
+}
+
+/* Hộp đăng ký */
+.register-box {
+    background: linear-gradient(145deg, rgba(10, 55, 100, 0.8), rgba(15, 65, 120, 0.9));
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 400px;
+    box-shadow: 0px 8px 30px rgba(166, 107, 249, 0.3);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid rgba(166, 107, 249, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(166, 107, 249, 0.1) 0%, transparent 60%);
+    animation: pulseLight 15s infinite linear;
+    z-index: -1;
+}
+
+@keyframes pulseLight {
+    0% { transform: scale(0.8); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(0.8); opacity: 0.3; }
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tiêu đề */
+.register-box h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(166, 107, 249, 0.5);
+}
+
+.register-box p {
+    margin-bottom: 25px;
+    color: #d1d1d1;
+    font-size: 15px;
+}
+
+/* Các ô nhập liệu */
+.input-group {
+    margin-bottom: 18px;
+    position: relative;
+    text-align: left;
+}
+
+.label-input-group {
+    margin-right: 0;
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #d1d1d1;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    border: 1px solid rgba(166, 107, 249, 0.2);
+}
+
+.checkbox-and-label {
+    margin-right: 0;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    gap: 10px;
+    color: #d1d1d1;
+}
+
+.checkbox-and-label input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: #7367f0;
+}
+
+.checkbox-and-label:hover {
+    cursor: pointer;
+}
+
+.checkbox-label:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Ô nhập liệu có hiệu ứng focus */
+.input-group input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 15px rgba(166, 107, 249, 0.4);
+    border: 1px solid rgba(166, 107, 249, 0.5);
+}
+
+/* Nút đăng ký */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #7367f0, #a66bf9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(166, 107, 249, 0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.register-btn::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #7367f0, #a66bf9, #7367f0, #a66bf9);
+    background-size: 400% 400%;
+    opacity: 0;
+    border-radius: 12px;
+    filter: blur(10px);
+    transition: opacity 0.3s;
+    z-index: -1;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.register-btn:hover::before {
+    opacity: 1;
+}
+
+.register-btn:active {
+    transform: scale(0.98);
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(166, 107, 249, 0.7);
+}
+
+/* Đăng nhập với mạng xã hội */
+.social-register {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-register a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(166, 107, 249, 0.2);
+}
+
+.social-register img {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.social-register a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(166, 107, 249, 0.4);
+}
+
+/* Đăng nhập */
+.register-text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #d1d1d1;
+}
+
+.register-text a {
+    color: #a66bf9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.register-text a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, transparent, #a66bf9, transparent);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.register-text a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

@@ -1,0 +1,171 @@
+/* Styles cho Classes Attended - Làm gọn lại */
+.class-list-container {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+.class-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.class-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.class-item:hover {
+    background-color: #f0f7ff;
+}
+
+/* Custom scrollbar cho container */
+.class-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.class-list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.class-list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.class-list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Styles cho Learning Progress */
+.progress-container {
+    margin-top: 8px;
+}
+
+.progress-info {
+    margin-bottom: 5px;
+}
+
+.progress-text {
+    font-weight: 500;
+    color: #495057;
+    font-size: 13px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+/* Styles cho Conversation History */
+.conversation-container {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+.conversation-item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 11px;
+    color: #666;
+}
+
+.conversation-date {
+    font-style: italic;
+}
+
+.conversation-character {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.conversation-content {
+    white-space: pre-line;
+    line-height: 1.3;
+    font-size: 12px;
+}
+
+/* Scrollbar cho conversation container */
+.conversation-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.conversation-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.conversation-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.conversation-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Chỉnh sửa chung cho category */
+.category {
+    margin-bottom: 10px;
+}
+
+.category h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Flex container cho layout hai cột */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 0;
+} 
